@@ -13,7 +13,10 @@
         <li v-for="i in 10">{{i}}</li>
       </ul>
       <ul>
-        <li v-for="product in products"> {{product}}</li>
+        <li v-for="product in products">{{product}}</li>
+      </ul>
+      <ul>
+        <li v-for="task in tasks">{{task.id }} - {{ task.name}}</li>
       </ul>
     </div>
   </body>
@@ -21,7 +24,25 @@
     new Vue({
       el: "#app",
       data: {
-        products:['Product 1', 'Product 2', 'Product 3', 'Product 4']
+        products: ["Product 1", "Product 2", "Product 3", "Product 4"],
+        tasks: [
+          {
+            id: 1,
+            name: "task 1",
+          },
+          {
+            id: 2,
+            name: "task 2",
+          },
+          {
+            id: 3,
+            name: "task 3",
+          },
+          {
+            id: 4,
+            name: "task 4",
+          },
+        ],
       },
     });
   </script>
