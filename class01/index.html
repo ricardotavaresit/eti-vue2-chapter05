@@ -9,8 +9,12 @@
   </head>
   <body>
     <div id="app">
-      <div v-if="number > 5" style="background: #00ff00"> {{ecampleNumberHigther}} </div>
-      <div v-else-if="number == 5" style="background: #ffff00">{{ecampleNumberEqual}}</div>
+      <div v-if="number > 5" style="background: #00ff00">
+        {{ecampleNumberHigther}}
+      </div>
+      <div v-else-if="number == 5" style="background: #ffff00">
+        {{ecampleNumberEqual}}
+      </div>
       <div v-else style="background: #ff0000">{{exampleNumberLess}}</div>
     </div>
   </body>
@@ -25,6 +29,5 @@
       ecampleNumberEqual: "My number is equal to 5",
       exampleNumberLess: "My number is less than 5",
     },
-    methods: {},
   });
 </script>
