@@ -8,8 +8,10 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
   </head>
   <body>
-    <div id="app" v-if="showText">
-      <div>{{exampleText}}</div>
+    <div id="app">
+      <div v-if="number > 5" style="background: #00ff00"> {{ecampleNumberHigther}} </div>
+      <div v-else-if="number == 5" style="background: #ffff00">{{ecampleNumberEqual}}</div>
+      <div v-else style="background: #ff0000">{{exampleNumberLess}}</div>
     </div>
   </body>
 </html>
@@ -18,8 +20,10 @@
   new Vue({
     el: "#app",
     data: {
-      showText: true,
-      exampleText: "My text",
+      number: -1,
+      ecampleNumberHigther: "My number is higther than 5",
+      ecampleNumberEqual: "My number is equal to 5",
+      exampleNumberLess: "My number is less than 5",
     },
     methods: {},
   });
