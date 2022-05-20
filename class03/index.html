@@ -9,14 +9,19 @@
   </head>
   <body>
     <div id="app">
-     
+      <ul>
+        <li v-for="i in 10">{{i}}</li>
+      </ul>
+      <ul>
+        <li v-for="product in products"> {{product}}</li>
+      </ul>
     </div>
   </body>
   <script>
     new Vue({
       el: "#app",
       data: {
-        
+        products:['Product 1', 'Product 2', 'Product 3', 'Product 4']
       },
     });
   </script>
