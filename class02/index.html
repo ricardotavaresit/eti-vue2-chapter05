@@ -9,16 +9,20 @@
   </head>
   <body>
     <div id="app">
-       
+      <div style="background: #0000ff; margin: 20px; padding: 10px;;" v-if="isActive">
+        Directive v-if
+      </div>
+      <div style="background: #0000ff; margin: 20px; padding: 10px;;" v-show="isActive">
+        Directive v-show
+      </div>
+      <script>
+        new Vue({
+          el: "#app",
+          data: {
+            isActive: false,
+          },
+        });
+      </script>
     </div>
   </body>
 </html>
-
-<script>
-  new Vue({
-    el: "#app",
-    data: {
-     
-    },
-  });
-</script>
