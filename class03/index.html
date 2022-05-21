@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>eti-vue2-chapter05-03-directive-v-for-in-vue-js</title>
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <style>
+      .isActive{
+        background: #00ff00;
+      }
+    </style>
   </head>
   <body>
     <div id="app">
@@ -16,7 +21,9 @@
         <li v-for="product in products">{{product}}</li>
       </ul>
       <ul>
-        <li v-for="task in tasks">{{task.id }} - {{ task.name}}</li>
+        <li v-for="(task, index) in tasks" v-bind:class="{ isActive : task.isActive }"> 
+          {{index}} : {{task.id}} - {{ task.name}}
+        </li>
       </ul>
     </div>
   </body>
@@ -28,19 +35,23 @@
         tasks: [
           {
             id: 1,
-            name: "task 1",
+            name: "Task 1",
+            isActive: true
           },
           {
             id: 2,
-            name: "task 2",
+            name: "Task 2",
+            isActive: false
           },
           {
             id: 3,
-            name: "task 3",
+            name: "Task 3",
+            isActive: false
           },
           {
             id: 4,
-            name: "task 4",
+            name: "Task 4",
+            isActive: false
           },
         ],
       },
