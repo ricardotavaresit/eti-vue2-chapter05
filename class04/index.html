@@ -6,19 +6,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>eti-vue2-chapter05-04-filters-in-vue-js</title>
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
- 
+    <style>
+      .active{
+        background: #00ff00;
+      }
+    </style>
   </head>
   <body>
     <div id="app">
+      <h1> {{title}}</h1>
+      <ul>
+        <li v-for="task in tasks" v-bind:class="{active: task.completed}"> {{task.id}} - {{task.name | toUpperCase}} - {{task.name | toLowerCase}}</li>
+      </ul>
       
     </div>
   </body>
   <script>
+    Vue.filter('toLowerCase', function(val){
+      return val.toLowerCase();
+    });
+
     new Vue({
       el: "#app",
       data: {
+        title: "To-do List",
+        tasks: [
+          {
+            id: 1,
+            name: "Task 1",
+            completed: false
+          },
+          {
+            id: 2,
+            name: "Task 2",
+            completed: true
+          },
+          {
+            id: 3,
+            name: "Task 3",
+            completed: false
+          },
+          {
+            id: 4,
+            name: "Task 4",
+            completed: true
+          },
+        ],
         
       },
+      filters:{
+        toUpperCase( value ){
+          return value.toUpperCase();
+        }, 
+        
+      }
     });
   </script>
 </html>
