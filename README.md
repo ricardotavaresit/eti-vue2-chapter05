@@ -3,6 +3,7 @@ Chapter 05 - Conditions and loops in Vue JS
 - Class 01: Conditional rendering in Vue JS
 - Class 02: Diretive v-show in Vue JS
 - Class 03: Diretive v-for in Vue JS
+- Class 04: Filters in Vue JS
 
 ## Technologies used
 
