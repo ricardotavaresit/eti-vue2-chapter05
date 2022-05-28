@@ -1,4 +1,6 @@
-Chapter 05 - Conditions and loops in Vue JS
+<p align="center"><img src="https://www.vectorlogo.zone/logos/vuejs/vuejs-ar21.svg" width="200px"></p>
+
+<h2>Chapter 05 - Conditions and loops in Vue JS</h2>
 
 - Class 01: Conditional rendering in Vue JS
 - Class 02: Diretive v-show in Vue JS
